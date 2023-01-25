@@ -1,0 +1,48 @@
+[
+	{
+		"question": "What is your name?",
+		"type": "textInput",
+		"mandatory": true
+	},
+	{
+		"question": "Select your age range from the below drop down?",
+		"type": "dropDown",
+		"options": [
+			"20 - 25",
+			"25 - 30",
+			"30 - 35",
+			"35 - 40"
+		],
+		"mandatory": true
+	},
+	{
+		"question": "Have you ever been declined admit from a Canada university program?",
+		"type": "checkBox",
+		"options": [
+			"yes",
+			"no"
+		]
+	},
+	{
+		"question": "Why did you choose BorderPass for your immigration service (select all that apply)?",
+		"type": "multiSelect",
+		"options": [
+			"To get your student visa to come study in Canada",
+			"To get your documents reviewed by a qualified Canadian immigration lawyer",
+			"To let an expert team handle all government communications for your pre arrival ",
+			"To manage your visa extensions and post graduate work permit"
+		]
+	},
+	{
+		"question": "On a scale of 1 to 10 how do you rate your experience with BorderPass?",
+		"type": "slider"
+	},
+	{
+		"question": "Would you recommend BorderPass to a friend (please answer on a scale of 1 to 10)?",
+		"type": "slider"
+	},
+	{
+		"question": "Please provide feedback , this will help us improve our platform greatly",
+		"type": "textInput"
+	}
+]
