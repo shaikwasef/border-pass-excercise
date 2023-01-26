@@ -1,5 +1,5 @@
 import './App.css'
-import { Question, ButtonGroups, ErrorComponent } from './components'
+import { Questions, ButtonGroups, ErrorComponent } from './components'
 import { apiEndPoints } from './constants'
 import useApi from './hooks/use-api'
 import { IQuestion } from './interfaces'
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <Question questions={apiData} />
+      <Questions questions={apiData} />
       <ButtonGroups />
     </div>
   )

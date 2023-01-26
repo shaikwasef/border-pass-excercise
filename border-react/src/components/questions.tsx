@@ -5,9 +5,10 @@ interface PropsInterface {
   questions: IQuestion[]
 }
 
-export default function Question(props: PropsInterface) {
+export default function Questions(props: PropsInterface) {
   const { questions } = props
 
   console.log(questions)
+
   return <div className={Styles.app}></div>
 }

@@ -1,5 +1,5 @@
-import Question from './question'
+import Questions from './questions'
 import ButtonGroups from './button-group'
 import ErrorComponent from './error-component'
 
-export { Question, ButtonGroups, ErrorComponent }
+export { Questions, ButtonGroups, ErrorComponent }
