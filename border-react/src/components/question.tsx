@@ -5,7 +5,7 @@ interface PropsInterface {
   questions: IQuestion[]
 }
 
-export default function Questions(props: PropsInterface) {
+export default function Question(props: PropsInterface) {
   const { questions } = props
 
   console.log(questions)
