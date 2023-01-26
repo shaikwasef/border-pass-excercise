@@ -1,3 +1,3 @@
 export const apiEndPoints = {
-	LOCAL_HOST_QUESTIONS_API: 'http://localhost:4000/questions',
+	LOCAL_HOST_QUESTIONS_API: 'http://localhost:8000/questions',
 };

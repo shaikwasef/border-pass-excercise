@@ -1,4 +1,4 @@
-import { IApiError, ApiResponse } from '../interfaces/use-api.interface';
+import { IApiError, ApiResponse } from '../interfaces';
 import axios, { AxiosError } from 'axios';
 import { useEffect, useState } from 'react';
 
