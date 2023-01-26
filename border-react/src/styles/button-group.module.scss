@@ -1,0 +1,19 @@
+.buttonGroup{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	padding: 20px 20px;
+	width: inherit;
+	:global {
+		.MuiButton-root{
+			min-width: 100px;	
+		}
+	}
+}
+
+.button{
+	width: 30%;
+
+}
+
