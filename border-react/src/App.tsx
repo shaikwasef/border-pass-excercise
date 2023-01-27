@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <Question questions={apiData} />
+      <Question question={{ ...apiData[0], index: 0 }} />
       <ButtonGroups />
     </div>
   )

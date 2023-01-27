@@ -7,7 +7,7 @@ export default function useApi<ResponseType>(
 ): ApiResponse<ResponseType> {
 	const [apiData, setApiData] = useState<ResponseType[]>([]);
 	const [error, setError] = useState<IApiError>();
-	const [loading, setLoading] = useState<boolean>(false);
+	const [loading, setLoading] = useState<boolean>(true);
 
 	useEffect(() => {
 		async function fetchData() {

@@ -1,10 +1,18 @@
 @import './main.scss';
 
 .app {
+	@extend .flexDisplayRow ;
   background-color: #252d4a;
   width: 40vw;
+	min-width: 300px;
   height: 50vh;
+	min-height: 400px;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);	
+	h3 {
+		width: 50%;
+		text-align: center;
+	}
 }
+
