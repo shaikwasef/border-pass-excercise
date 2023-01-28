@@ -51,8 +51,15 @@ export default function Question(props: PropsInterface) {
   return (
     <div>
       <div className={Styles.app}>
-        <h5>{question.mandatory && `*Required`}</h5>
-        <h3>{`${question.index + 1}. ${question.question}`}</h3>
+        <h5>
+          {question.mandatory &&
+            `*Required : Answer to move to the next question`}
+        </h5>
+        <h3>
+          <span>* </span>
+          {`${question.index + 1}. ${question.question}`}
+        </h3>
+
         <form
           className={Styles.form}
           onChange={(ev: any) => {
