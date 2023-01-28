@@ -5,6 +5,11 @@ export interface IQuestion {
 	options?: String[] | number[],
 }
 
+export interface IAnswer {
+	answer: string | string[];
+	index: number
+}
+
 enum QuestionType {
 	CHECKBOX = "checkbox",
 	MULTI_SELECT = "multiSelect",

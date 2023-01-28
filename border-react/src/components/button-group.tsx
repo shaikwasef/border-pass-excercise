@@ -3,7 +3,15 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import Styles from '../styles/button-group.module.scss'
 
-export default function ButtonGroups() {
+interface PropsInterface {
+  onNextClick: () => void
+  onBackClick: () => void
+  index: number
+}
+
+export default function ButtonGroups(props: PropsInterface) {
+  const { onNextClick, onBackClick, index } = props
+
   return (
     <div className={Styles.buttonGroup}>
       <Button
@@ -11,7 +19,8 @@ export default function ButtonGroups() {
         startIcon={<ArrowBackIcon />}
         variant="contained"
         color="error"
-        disabled={true}
+        disabled={!index}
+        onClick={onBackClick}
       >
         Back
       </Button>
@@ -20,6 +29,7 @@ export default function ButtonGroups() {
         endIcon={<ArrowForwardIcon />}
         variant="contained"
         color="success"
+        onClick={onNextClick}
       >
         Next
       </Button>

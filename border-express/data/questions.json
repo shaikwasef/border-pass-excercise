@@ -21,7 +21,8 @@
 		"options": [
 			"yes",
 			"no"
-		]
+		],
+		"mandatory": false
 	},
 	{
 		"question": "Why did you choose BorderPass for your immigration service (select all that apply)?",
@@ -31,18 +32,22 @@
 			"To get your documents reviewed by a qualified Canadian immigration lawyer",
 			"To let an expert team handle all government communications for your pre arrival ",
 			"To manage your visa extensions and post graduate work permit"
-		]
+		],
+		"mandatory": false
 	},
 	{
 		"question": "On a scale of 1 to 10 how do you rate your experience with BorderPass?",
-		"type": "slider"
+		"type": "slider",
+		"mandatory": false
 	},
 	{
 		"question": "Would you recommend BorderPass to a friend (please answer on a scale of 1 to 10)?",
-		"type": "slider"
+		"type": "slider",
+		"mandatory": false
 	},
 	{
 		"question": "Please provide feedback , this will help us improve our platform greatly",
-		"type": "textInput"
+		"type": "textInput",
+		"mandatory": false
 	}
 ]

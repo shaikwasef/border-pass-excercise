@@ -1,9 +1,10 @@
 import './App.css'
-import { Question, ButtonGroups, ErrorComponent } from './components'
+import { Question, ErrorComponent } from './components'
 import { apiEndPoints } from './constants'
 import useApi from './hooks/use-api'
 import { IQuestion } from './interfaces'
 import CircularProgress from '@mui/material/CircularProgress'
+import Questions from './components/questions'
 
 function App() {
   const [apiData, error, loading] = useApi<IQuestion>(
@@ -20,8 +21,7 @@ function App() {
 
   return (
     <div>
-      <Question question={{ ...apiData[0], index: 0 }} />
-      <ButtonGroups />
+      <Questions questions={apiData} />
     </div>
   )
 }
