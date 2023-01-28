@@ -12,7 +12,7 @@
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);	
 	position: relative;
 	h3 {
-		min-width: 50%;
+		width: 50%;
 		text-align: center;
 	}
 	h5{
@@ -25,12 +25,18 @@
 .form{
 	flex-grow: 1;
 	:global {
+		.MuiSelect-select{
+			border-radius: 20px;
+		}
 		.MuiInputBase-input{
 			background-color: lightblue;
 			border-radius: 20px;
 		}
 		.MuiOutlinedInput-notchedOutline{
 			border-radius: 20px;
+		}
+		.MuiFormControl-root {
+			min-width: 100%;
 		}
 	}
 }

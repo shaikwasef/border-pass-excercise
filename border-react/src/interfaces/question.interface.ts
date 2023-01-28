@@ -2,7 +2,7 @@ export interface IQuestion {
 	question: string;
 	type: QuestionType,
 	mandatory: boolean
-	options?: String[] | number[],
+	options?: string[] | number[],
 }
 
 export interface IAnswer {

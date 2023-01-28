@@ -2,7 +2,8 @@ import { TextField } from '@mui/material'
 import { IQuestion } from '../interfaces'
 import { ButtonGroups } from '../components'
 import Styles from '../styles/question.module.scss'
-import { FormEvent, useState } from 'react'
+import { useState } from 'react'
+import DropDown from './drop-down'
 
 interface IQuestionWithIndex extends IQuestion {
   index: number
@@ -26,6 +27,8 @@ export default function Question(props: PropsInterface) {
             required={question.mandatory}
           />
         )
+      case 'dropDown':
+        return <DropDown options={question.options} />
     }
   }
 
