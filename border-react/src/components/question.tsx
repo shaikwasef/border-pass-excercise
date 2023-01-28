@@ -55,6 +55,8 @@ export default function Question(props: PropsInterface) {
         onNextClick={handleNextClick}
         onBackClick={handleBackClick}
         index={question.index}
+        answer={answer}
+        mandatory={question.mandatory}
       />
     </div>
   )
