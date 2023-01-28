@@ -4,20 +4,23 @@ import { ButtonGroups } from '../components'
 import Styles from '../styles/question.module.scss'
 import { useState } from 'react'
 import DropDown from './drop-down'
+import { IAnswer } from '../interfaces/question.interface'
 
 interface IQuestionWithIndex extends IQuestion {
   index: number
 }
 interface PropsInterface {
   question: IQuestionWithIndex
+  savedAnswers: IAnswer
   setQuestionIndex: React.Dispatch<React.SetStateAction<number>>
+  setSavedAnswers: React.Dispatch<React.SetStateAction<IAnswer>>
 }
 
 export default function Question(props: PropsInterface) {
-  const { question, setQuestionIndex } = props
+  const { question, setQuestionIndex, savedAnswers, setSavedAnswers } = props
   const [answer, setAnswer] = useState<string | string[]>()
 
-  const getComponentForType = (question: IQuestion) => {
+  const getComponentForType = (question: IQuestionWithIndex) => {
     switch (question.type) {
       case 'textInput':
         return (
@@ -25,6 +28,7 @@ export default function Question(props: PropsInterface) {
             fullWidth
             className={Styles.textField}
             required={question.mandatory}
+            defaultValue={savedAnswers[question.index]}
           />
         )
       case 'dropDown':
@@ -33,7 +37,11 @@ export default function Question(props: PropsInterface) {
   }
 
   const handleNextClick = () => {
-    setQuestionIndex(question.index + 1)
+    if (answer) {
+      setQuestionIndex(question.index + 1)
+      const answers = { ...savedAnswers, [question.index]: answer }
+      setSavedAnswers(answers)
+    }
   }
 
   const handleBackClick = () => {
