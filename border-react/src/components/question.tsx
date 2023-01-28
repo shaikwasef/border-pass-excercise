@@ -2,7 +2,7 @@ import { TextField } from '@mui/material'
 import { IQuestion } from '../interfaces'
 import { ButtonGroups } from '../components'
 import Styles from '../styles/question.module.scss'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import DropDown from './drop-down'
 import { IAnswer } from '../interfaces/question.interface'
 
@@ -19,6 +19,10 @@ interface PropsInterface {
 export default function Question(props: PropsInterface) {
   const { question, setQuestionIndex, savedAnswers, setSavedAnswers } = props
   const [answer, setAnswer] = useState<string>('')
+
+  useEffect(() => {
+    setAnswer(savedAnswers[question.index])
+  }, [question.index])
 
   const getComponentForType = (question: IQuestionWithIndex) => {
     switch (question.type) {
