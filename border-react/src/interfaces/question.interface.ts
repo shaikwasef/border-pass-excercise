@@ -6,7 +6,7 @@ export interface IQuestion {
 }
 
 export interface IAnswer {
-	[key: number]: string | string[]
+	[key: number]: string
 }
 
 enum QuestionType {

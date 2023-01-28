@@ -16,7 +16,6 @@ export default function Questions(props: PropsInterface) {
       <Question
         question={{ ...questions[questionIndex], index: questionIndex }}
         setQuestionIndex={setQuestionIndex}
-        questionIndex={questionIndex}
         savedAnswers={savedAnswers}
         setSavedAnswers={setSavedAnswers}
       />

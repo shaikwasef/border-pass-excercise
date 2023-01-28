@@ -30,8 +30,10 @@
 .form{
 	flex-grow: 1;
 	:global {
-		.MuiSelect-select{
-			border-radius: 20px;
+		.MuiInputBase-root{
+			.MuiSelect-select{
+				border-radius: 20px;
+			}
 		}
 		.MuiInputBase-input{
 			background-color: lightblue;
