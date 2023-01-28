@@ -13,6 +13,7 @@ export default function Questions(props: PropsInterface) {
     <div>
       <Question
         question={{ ...questions[questionIndex], index: questionIndex }}
+				setQuestionIndex = {setQuestionIndex}
       />
     </div>
   )

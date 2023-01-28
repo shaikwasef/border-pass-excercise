@@ -9,10 +9,11 @@ interface IQuestionWithIndex extends IQuestion {
 }
 interface PropsInterface {
   question: IQuestionWithIndex
+  setQuestionIndex: React.Dispatch<React.SetStateAction<number>>
 }
 
 export default function Question(props: PropsInterface) {
-  const { question } = props
+  const { question, setQuestionIndex } = props
   const [answer, setAnswer] = useState<string | string[]>()
 
   const getComponentForType = (question: IQuestion) => {
@@ -29,11 +30,11 @@ export default function Question(props: PropsInterface) {
   }
 
   const handleNextClick = () => {
-    console.log('next')
+    setQuestionIndex(question.index + 1)
   }
 
   const handleBackClick = () => {
-    console.log('back')
+    setQuestionIndex(question.index - 1)
   }
 
   return (
