@@ -14,11 +14,18 @@ interface PropsInterface {
   savedAnswers: IAnswer
   setQuestionIndex: React.Dispatch<React.SetStateAction<number>>
   setSavedAnswers: React.Dispatch<React.SetStateAction<IAnswer>>
+  questionIndex: number
 }
 
 export default function Question(props: PropsInterface) {
-  const { question, setQuestionIndex, savedAnswers, setSavedAnswers } = props
-  const [answer, setAnswer] = useState<string | string[]>()
+  const {
+    question,
+    setQuestionIndex,
+    savedAnswers,
+    setSavedAnswers,
+    questionIndex,
+  } = props
+  const [answer, setAnswer] = useState<string>('')
 
   const getComponentForType = (question: IQuestionWithIndex) => {
     switch (question.type) {
@@ -37,11 +44,9 @@ export default function Question(props: PropsInterface) {
   }
 
   const handleNextClick = () => {
-    if (answer) {
-      setQuestionIndex(question.index + 1)
-      const answers = { ...savedAnswers, [question.index]: answer }
-      setSavedAnswers(answers)
-    }
+    setQuestionIndex(questionIndex + 1)
+    const answers = { ...savedAnswers, [questionIndex]: answer }
+    setSavedAnswers(answers)
   }
 
   const handleBackClick = () => {
