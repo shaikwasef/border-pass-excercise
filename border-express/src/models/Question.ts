@@ -7,8 +7,8 @@ export interface IQuestion {
 
 enum QuestionType {
 	RADIO = "radio",
-	MULTI_SELECT = "multiSelect",
+	RATING = "rating",
 	TEXT_INPUT = "textInput",
-	SLIDER = "slider",
+	MULTI_LINE_TEXT = "multiLineTextInput",
 	DROP_DOWN = "dropDown"
 }

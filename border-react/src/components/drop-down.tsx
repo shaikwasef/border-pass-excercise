@@ -14,7 +14,9 @@ export default function DropDown(props: PropsInterface) {
   const [menuValue, setMenuValue] = useState('')
 
   useEffect(() => {
-    setMenuValue(dropDownAnswer)
+    if (dropDownAnswer) {
+      setMenuValue(dropDownAnswer)
+    }
   }, [dropDownAnswer])
 
   const handleChange = (event: SelectChangeEvent) => {

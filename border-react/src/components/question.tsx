@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import DropDown from './drop-down'
 import { IAnswer, QuestionType } from '../interfaces/question.interface'
 import RadioButtonsGroup from './radio-button-group'
-import MultiSelectGroup from './multi-select-buttons'
+import RatingComponent from './rating-component'
 
 interface IQuestionWithIndex extends IQuestion {
   index: number
@@ -21,7 +21,6 @@ interface PropsInterface {
 export default function Question(props: PropsInterface) {
   const { question, setQuestionIndex, savedAnswers, setSavedAnswers } = props
   const [answer, setAnswer] = useState<string>('')
-
   useEffect(() => {
     setAnswer(savedAnswers[question.index])
   }, [question.index])
@@ -32,7 +31,16 @@ export default function Question(props: PropsInterface) {
         return (
           <TextField
             fullWidth
-            className={Styles.textField}
+            required={question.mandatory}
+            defaultValue={savedAnswers[question.index]}
+          />
+        )
+      case QuestionType.MULTI_LINE_TEXT:
+        return (
+          <TextField
+            multiline={true}
+            fullWidth
+            rows={5}
             required={question.mandatory}
             defaultValue={savedAnswers[question.index]}
           />
@@ -53,8 +61,14 @@ export default function Question(props: PropsInterface) {
             selectedAnswer={savedAnswers[question.index]}
           />
         )
-      case QuestionType.MULTI_SELECT:
-        return <MultiSelectGroup options={question.options} />
+      case QuestionType.RATING:
+        return (
+          <RatingComponent
+            setAnswer={setAnswer}
+            selectedAnswer={savedAnswers[question.index]}
+            questionIndex={question.index}
+          />
+        )
     }
   }
 

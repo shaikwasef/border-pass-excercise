@@ -16,6 +16,17 @@
 		"mandatory": true
 	},
 	{
+		"question": "Gender : How do you identify?",
+		"type": "dropDown",
+		"options": [
+			"Man",
+			"Woman",
+			"others",
+			"Prefer , not to reveal"
+		],
+		"mandatory": true
+	},
+	{
 		"question": "Have you ever been declined admit from a Canadian university program?",
 		"type": "radio",
 		"options": [
@@ -25,29 +36,31 @@
 		"mandatory": false
 	},
 	{
-		"question": "Why did you choose BorderPass for your immigration service (select all that apply)?",
-		"type": "multiSelect",
+		"question": "On a scale of 1 to 10 how do you rate your experience with BorderPass?",
+		"type": "rating",
+		"mandatory": false
+	},
+	{
+		"question": "Where did you hear about us?",
+		"type": "radio",
 		"options": [
-			"To get your student visa to come study in Canada",
-			"To get your documents reviewed by a qualified Canadian immigration lawyer",
-			"To let an expert team handle all government communications for your pre arrival ",
-			"To manage your visa extensions and post graduate work permit"
+			"Social media - Example facebook , LinkedIn ",
+			"Through a friend",
+			"Google ads",
+			"Our website",
+			"Campaigning event",
+			"others"
 		],
 		"mandatory": false
 	},
 	{
-		"question": "On a scale of 1 to 10 how do you rate your experience with BorderPass?",
-		"type": "slider",
-		"mandatory": false
-	},
-	{
 		"question": "Would you recommend BorderPass to a friend (please answer on a scale of 1 to 10)?",
-		"type": "slider",
+		"type": "rating",
 		"mandatory": false
 	},
 	{
 		"question": "Please provide feedback , this will help us improve our platform greatly",
-		"type": "textInput",
+		"type": "multiLineTextInput",
 		"mandatory": false
 	}
 ]

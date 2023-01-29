@@ -9,15 +9,20 @@ interface PropsInterface {
 
 export default function RadioButtonsGroup(props: PropsInterface) {
   const { selectedAnswer, setAnswer, options } = props
-  const [value, setValue] = useState<string>('yes')
+  const [value, setValue] = useState<string>('')
 
   useEffect(() => {
-    setValue(selectedAnswer)
+    if (selectedAnswer) {
+      setValue(selectedAnswer)
+    }
   }, [selectedAnswer])
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setAnswer(event.target.value)
-    setValue((event.target as HTMLInputElement).value)
+  const handleChange = (event: any) => {
+    const currAnswer = isNaN(event.target.labels[0].textContent)
+      ? event.target.labels[0].textContent
+      : event.target.labels[0].textContent.toString()
+    setAnswer(currAnswer)
+    setValue(currAnswer)
   }
 
   return (

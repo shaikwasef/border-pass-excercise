@@ -14,7 +14,7 @@
 	position: relative;
 	h3 {
 		flex-grow: 1;
-		width: 55%;
+		width: 50%;
 		text-align: center;
 		span {
 			color : red
@@ -30,14 +30,17 @@
 }
 
 .form{
-	min-width: 40%;
+	min-width: 45%;
 	max-width: 100%;
 	margin: auto;
 	:global {
 		.MuiInputBase-root{
 			.MuiSelect-select{
-				border-radius: 20px;
+				border-radius: 10px;
 			}
+		}
+		.MuiOutlinedInput-root{
+			padding : 0;
 		}
 		.MuiFormGroup-root{
 			width: 100%;
@@ -49,10 +52,10 @@
 		}
 		.MuiInputBase-input{
 			background-color: lightblue;
-			border-radius: 20px;
+			border-radius: 10px;
 		}
 		.MuiOutlinedInput-notchedOutline{
-			border-radius: 20px;
+			border-radius: 10px;
 		}
 		.MuiFormControl-root {
 			min-width: 100%;
