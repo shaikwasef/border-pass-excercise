@@ -6,18 +6,17 @@ import Select, { SelectChangeEvent } from '@mui/material/Select'
 interface PropsInterface {
   setAnswer: React.Dispatch<React.SetStateAction<string>>
   dropDownAnswer: string
+  questionIndex: number
   options?: string[] | number[]
 }
 
 export default function DropDown(props: PropsInterface) {
-  const { options, setAnswer, dropDownAnswer } = props
+  const { options, setAnswer, dropDownAnswer, questionIndex } = props
   const [menuValue, setMenuValue] = useState('')
 
   useEffect(() => {
-    if (dropDownAnswer) {
-      setMenuValue(dropDownAnswer)
-    }
-  }, [dropDownAnswer])
+    setMenuValue(dropDownAnswer ? dropDownAnswer : '')
+  }, [dropDownAnswer, questionIndex])
 
   const handleChange = (event: SelectChangeEvent) => {
     setAnswer(event.target.value)

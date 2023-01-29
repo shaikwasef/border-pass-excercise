@@ -10,12 +10,9 @@ interface PropsInterface {
 export default function RatingComponent(props: PropsInterface) {
   const { setAnswer, selectedAnswer, questionIndex } = props
   const [value, setValue] = useState<string>('0')
+
   useEffect(() => {
-    if (selectedAnswer) {
-      setValue(selectedAnswer)
-    } else {
-      setValue('0')
-    }
+    setValue(selectedAnswer ? selectedAnswer : '0')
   }, [selectedAnswer, questionIndex])
 
   return (

@@ -22,6 +22,7 @@ interface PropsInterface {
 export default function Question(props: PropsInterface) {
   const { question, setQuestionIndex, savedAnswers, setSavedAnswers } = props
   const [answer, setAnswer] = useState<string>('')
+
   useEffect(() => {
     setAnswer(savedAnswers[question.index])
   }, [question.index])
@@ -53,6 +54,7 @@ export default function Question(props: PropsInterface) {
             options={question.options}
             setAnswer={setAnswer}
             dropDownAnswer={savedAnswers[question.index]}
+            questionIndex={question.index}
           />
         )
       case QuestionType.RADIO:
@@ -61,6 +63,7 @@ export default function Question(props: PropsInterface) {
             options={question.options}
             setAnswer={setAnswer}
             selectedAnswer={savedAnswers[question.index]}
+            questionIndex={question.index}
           />
         )
       case QuestionType.RATING:
@@ -74,13 +77,18 @@ export default function Question(props: PropsInterface) {
     }
   }
 
-  const handleNextClick = () => {
+  const setAnswersFunc = () => {
     const answers = { ...savedAnswers, [question.index]: answer }
-    setQuestionIndex(question.index + 1)
     setSavedAnswers(answers)
   }
 
+  const handleNextClick = () => {
+    setAnswersFunc()
+    setQuestionIndex(question.index + 1)
+  }
+
   const handleBackClick = () => {
+    setAnswersFunc()
     setQuestionIndex(question.index - 1)
   }
 
