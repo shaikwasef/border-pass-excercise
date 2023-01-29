@@ -10,7 +10,6 @@ export interface IAnswer {
 }
 
 export enum QuestionType {
-	CHECKBOX = "checkbox",
 	RADIO = "radio",
 	MULTI_SELECT = "multiSelect",
 	TEXT_INPUT = "textInput",

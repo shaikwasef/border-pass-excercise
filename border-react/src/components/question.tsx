@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import DropDown from './drop-down'
 import { IAnswer, QuestionType } from '../interfaces/question.interface'
 import RadioButtonsGroup from './radio-button-group'
+import MultiSelectGroup from './multi-select-buttons'
 
 interface IQuestionWithIndex extends IQuestion {
   index: number
@@ -52,6 +53,8 @@ export default function Question(props: PropsInterface) {
             selectedAnswer={savedAnswers[question.index]}
           />
         )
+      case QuestionType.MULTI_SELECT:
+        return <MultiSelectGroup options={question.options} />
     }
   }
 
