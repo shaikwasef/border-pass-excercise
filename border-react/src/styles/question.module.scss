@@ -2,6 +2,7 @@
 
 .app {
 	@extend .flexDisplayRow ;
+	flex-wrap: wrap;
   background-color: #252d4a;
   width: 40vw;
 	min-width: 300px;
@@ -12,7 +13,8 @@
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);	
 	position: relative;
 	h3 {
-		width: 50%;
+		flex-grow: 1;
+		width: 55%;
 		text-align: center;
 		span {
 			color : red
@@ -28,7 +30,9 @@
 }
 
 .form{
-	flex-grow: 1;
+	min-width: 40%;
+	max-width: 100%;
+	margin: auto;
 	:global {
 		.MuiInputBase-root{
 			.MuiSelect-select{
@@ -36,8 +40,11 @@
 			}
 		}
 		.MuiFormGroup-root{
+			width: 100%;
 			.MuiFormControlLabel-root {
-				padding-left: 50%;
+				width: fit-content;
+				padding-left: 30px;
+
 			}
 		}
 		.MuiInputBase-input{
