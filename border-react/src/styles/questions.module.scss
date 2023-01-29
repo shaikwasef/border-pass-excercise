@@ -1,0 +1,6 @@
+@import './main.scss';
+
+.questionContainer{
+	@extend .flexDisplayCol ;
+	row-gap: 20px;
+}

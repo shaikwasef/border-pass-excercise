@@ -1,6 +1,6 @@
 @import './main.scss';
 
-.app {
+.question {
 	@extend .flexDisplayRow ;
 	flex-wrap: wrap;
   background-color: #252d4a;
@@ -29,10 +29,15 @@
 	}
 }
 
+.multiInputForm {
+	min-width: 100% !important;
+	margin: 0 0 !important;
+}
+
 .form{
 	min-width: 45%;
 	max-width: 100%;
-	margin: auto;
+	margin: 0 auto;
 	:global {
 		.MuiInputBase-root{
 			.MuiSelect-select{

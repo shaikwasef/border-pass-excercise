@@ -7,6 +7,7 @@ import DropDown from './drop-down'
 import { IAnswer, QuestionType } from '../interfaces/question.interface'
 import RadioButtonsGroup from './radio-button-group'
 import RatingComponent from './rating-component'
+import clsx from 'clsx'
 
 interface IQuestionWithIndex extends IQuestion {
   index: number
@@ -39,7 +40,8 @@ export default function Question(props: PropsInterface) {
         return (
           <TextField
             multiline={true}
-            fullWidth
+            fullWidth={true}
+            className={Styles.multiLine}
             rows={5}
             required={question.mandatory}
             defaultValue={savedAnswers[question.index]}
@@ -84,7 +86,7 @@ export default function Question(props: PropsInterface) {
 
   return (
     <div>
-      <div className={Styles.app}>
+      <div className={Styles.question}>
         <h5>
           {question.mandatory &&
             `*Required : Answer to move to the next question`}
@@ -95,7 +97,11 @@ export default function Question(props: PropsInterface) {
         </h3>
 
         <form
-          className={Styles.form}
+          className={clsx(
+            question.type === QuestionType.MULTI_LINE_TEXT &&
+              Styles.multiInputForm,
+            Styles.form,
+          )}
           onChange={(ev: any) => {
             setAnswer(ev.target.value)
           }}
