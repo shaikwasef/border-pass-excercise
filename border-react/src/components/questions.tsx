@@ -36,7 +36,7 @@ export default function Questions(props: PropsInterface) {
           />
         </>
       ) : (
-        <h2>BorderPass thanks you for your answers!!</h2>
+        <h2 className={Styles.note}>BorderPass thanks you for your answers!!</h2>
       )}
     </div>
   )
