@@ -4,7 +4,8 @@ import { ButtonGroups } from '../components'
 import Styles from '../styles/question.module.scss'
 import { useEffect, useState } from 'react'
 import DropDown from './drop-down'
-import { IAnswer } from '../interfaces/question.interface'
+import { IAnswer, QuestionType } from '../interfaces/question.interface'
+import RadioButtonsGroup from './radio-button-group'
 
 interface IQuestionWithIndex extends IQuestion {
   index: number
@@ -26,7 +27,7 @@ export default function Question(props: PropsInterface) {
 
   const getComponentForType = (question: IQuestionWithIndex) => {
     switch (question.type) {
-      case 'textInput':
+      case QuestionType.TEXT_INPUT:
         return (
           <TextField
             fullWidth
@@ -35,7 +36,7 @@ export default function Question(props: PropsInterface) {
             defaultValue={savedAnswers[question.index]}
           />
         )
-      case 'dropDown':
+      case QuestionType.DROP_DOWN:
         return (
           <DropDown
             options={question.options}
@@ -43,12 +44,20 @@ export default function Question(props: PropsInterface) {
             dropDownAnswer={savedAnswers[question.index]}
           />
         )
+      case QuestionType.RADIO:
+        return (
+          <RadioButtonsGroup
+            options={question.options}
+            setAnswer={setAnswer}
+            selectedAnswer={savedAnswers[question.index]}
+          />
+        )
     }
   }
 
   const handleNextClick = () => {
-    setQuestionIndex(question.index + 1)
     const answers = { ...savedAnswers, [question.index]: answer }
+    setQuestionIndex(question.index + 1)
     setSavedAnswers(answers)
   }
 
@@ -64,7 +73,7 @@ export default function Question(props: PropsInterface) {
             `*Required : Answer to move to the next question`}
         </h5>
         <h3>
-          <span>* </span>
+          <span>{question.mandatory && `* `}</span>
           {`${question.index + 1}. ${question.question}`}
         </h3>
 

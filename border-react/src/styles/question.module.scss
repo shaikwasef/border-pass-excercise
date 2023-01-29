@@ -35,6 +35,11 @@
 				border-radius: 20px;
 			}
 		}
+		.MuiFormGroup-root{
+			.MuiFormControlLabel-root {
+				padding-left: 50%;
+			}
+		}
 		.MuiInputBase-input{
 			background-color: lightblue;
 			border-radius: 20px;

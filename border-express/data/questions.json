@@ -16,11 +16,11 @@
 		"mandatory": true
 	},
 	{
-		"question": "Have you ever been declined admit from a Canada university program?",
-		"type": "checkBox",
+		"question": "Have you ever been declined admit from a Canadian university program?",
+		"type": "radio",
 		"options": [
-			"yes",
-			"no"
+			"YES",
+			"NO"
 		],
 		"mandatory": false
 	},
