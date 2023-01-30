@@ -1,5 +1,5 @@
 import './App.css'
-import { Question, ErrorComponent } from './components'
+import { ErrorComponent } from './components'
 import { apiEndPoints } from './constants'
 import useApi from './hooks/use-api'
 import { IQuestion } from './interfaces'

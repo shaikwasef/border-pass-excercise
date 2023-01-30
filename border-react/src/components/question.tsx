@@ -25,7 +25,7 @@ export default function Question(props: PropsInterface) {
 
   useEffect(() => {
     setAnswer(savedAnswers[question.index])
-  }, [question.index])
+  }, [question.index, savedAnswers])
 
   const getComponentForType = (question: IQuestionWithIndex) => {
     switch (question.type) {
