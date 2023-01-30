@@ -1,3 +1,9 @@
+Online deployment 
+
+Application - Open [https://border-react.netlify.app/][https://border-react.netlify.app/]
+Express server - Open [https://border-pass-express.up.railway.app/questions][https://border-pass-express.up.railway.app/questions]
+
+
 # Assignment for border pass interview process
 
 ## Project structure
