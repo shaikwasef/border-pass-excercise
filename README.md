@@ -19,7 +19,7 @@ To start the backend server navigate to border-express directory
 
 Start the server using yarn 
 
-`yarn install`
+`yarn install` <br />
  `yarn start`
 
 The express app will start at port 8000 , the api end point is `http://localhost:8000/questions`
@@ -32,7 +32,7 @@ To start the backend server navigate to border-express directory
 
 Start the server using yarn 
 
- `yarn install`
+ `yarn install` <br />
  `yarn start`
 
 The express app will start at port 3000 , the app loads on `http://localhost:3000`
