@@ -41,9 +41,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 # To launch unit tests 
 
- `yarn test`
+ `yarn test` will run all tests present in the `__tests__` folder . 
 
 Check the below screenshot for report on tests. 
+
+<img width="702" alt="Screenshot 2023-01-30 at 4 27 15 PM" src="https://user-images.githubusercontent.com/12941030/215599291-d4e715fc-9de9-4a75-a87a-a477607f753f.png">
+
 
 
 The online deployed version (netlify)  can be found on :  [https://border-react.netlify.app/]
