@@ -1,7 +1,7 @@
-Online deployment 
+Deployed versions
 
-Application - [https://border-react.netlify.app/] <br />
-Express server - [https://border-pass-express.up.railway.app/questions]
+Application - https://border-react.netlify.app/ <br />
+Express server - https://border-pass-express.up.railway.app/questions
 
 
 # Assignment for border pass interview process
