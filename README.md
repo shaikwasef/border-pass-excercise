@@ -46,4 +46,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Check the below screenshot for report on tests. 
 
 
-The online deployed version (netlify)  can be found on 
+The online deployed version (netlify)  can be found on :  [https://border-react.netlify.app/]
