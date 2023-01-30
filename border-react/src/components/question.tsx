@@ -9,7 +9,7 @@ import RadioButtonsGroup from './radio-button-group'
 import RatingComponent from './rating-component'
 import clsx from 'clsx'
 
-interface IQuestionWithIndex extends IQuestion {
+export interface IQuestionWithIndex extends IQuestion {
   index: number
 }
 interface PropsInterface {
