@@ -21,6 +21,7 @@ export default function ButtonGroups(props: PropsInterface) {
         className={Styles.button}
         startIcon={<ArrowBackIcon />}
         variant="contained"
+        role="button"
         color="error"
         disabled={!index}
         onClick={onBackClick}
@@ -31,6 +32,7 @@ export default function ButtonGroups(props: PropsInterface) {
         className={Styles.button}
         endIcon={<ArrowForwardIcon />}
         variant="contained"
+        role="button"
         color="success"
         onClick={onNextClick}
         disabled={checkDisableNextButton(mandatory, answer)}
