@@ -19,10 +19,10 @@
 		"question": "Gender : How do you identify?",
 		"type": "dropDown",
 		"options": [
-			"Man",
-			"Woman",
-			"others",
-			"Prefer , not to reveal"
+			"Male",
+			"Female",
+			"Other",
+			"Prefer, not to reveal"
 		],
 		"mandatory": true
 	},
