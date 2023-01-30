@@ -15,7 +15,7 @@ This project is based on React JS , Express JS and Typescript . The border-pass-
 
 To start the backend server navigate to border-express directory 
 
-### `cd border-express`
+ `cd border-express`
 
 Start the server using yarn 
 
