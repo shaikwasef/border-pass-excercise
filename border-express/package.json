@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "MIT",
+	"type": "module",
 	"scripts": {
 		"start": "DEBUG=api ts-node-dev -- ./src/index.ts",
 		"test": "node -e \"console.log('No tests yet!')\""
